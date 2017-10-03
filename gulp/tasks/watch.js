@@ -4,12 +4,12 @@ browserSync = require('browser-sync').create();
 
 gulp.task('watch', function() {
 
-	notify: false,
-	browserSync.init({
-		server: {
-			baseDir: "app"
-		}
-	});
+  browserSync.init({
+    notify: false,
+    server: {
+      baseDir: "app"
+    }
+  });
 
   watch('./app/index.html', function() {
     browserSync.reload();
@@ -22,7 +22,6 @@ gulp.task('watch', function() {
 });
 
 gulp.task('cssInject', ['styles'], function() {
-	return gulp.src('./app/temp/styles/styles.css')
-		.pipe(browserSync.stream());
-
+  return gulp.src('./app/temp/styles/styles.css')
+    .pipe(browserSync.stream());
 });
