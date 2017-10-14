@@ -1,6 +1,12 @@
-function person(name, favColor) {
-	console.log("Hello, my name is " + name + " and my favourite color is " + favColor + ".");
+function Person(fullName, favColor) {
+	this.name = fullName;
+	this.favoriteColor = favColor;
+	this.greet = function() {
+		console.log("Hello, my name is " + this.name + " and my favorite color is " + this.favoriteColor+ ".");
+	}
 }
+var john = new Person("John Doe", "blue");
+john.greet();
 
-person("John Doe", "blue");
-person("Jane Smith", "green");
+var jane = new Person("Jane Smith", "green");
+jane.greet();
