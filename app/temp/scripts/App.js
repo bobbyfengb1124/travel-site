@@ -69,13 +69,12 @@
 
 var Person = __webpack_require__(1);
 
-/*
 var john = new Person("John Doe", "blue");
 john.greet();
 
 var jane = new Person("Jane Smith", "green");
 jane.greet();
-*/
+
 
 /***/ }),
 /* 1 */
@@ -89,7 +88,7 @@ function Person(fullName, favColor) {
 	}
 }
 
-console.log("Hello from Person.js");
+module.exports = Person;
 
 /***/ })
 /******/ ]);
